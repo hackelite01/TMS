@@ -51,20 +51,49 @@ export default function Simple() {
           />
           <HStack spacing={8} alignItems={"center"}>
             <Box>
-                          <Link to={"/"}>
-                              <Image w={40} src={logo} alt={logo} />
+              <Link to={"/"}>
+                <Image w={40} src={logo} alt={logo} />
               </Link>
             </Box>
             <HStack
               as={"nav"}
               spacing={4}
-                          display={{base: "none",md: "flex"}}
-            fontWeight={700}fontSize={20} color='#577b87'>
-              <Link to={"/testspeed"}><Text _hover={{bg:"#577b87",color:"white",p:2,borderRadius:10}}>Test Speed</Text></Link>
-              <Link to={"/techniques"}><Text _hover={{bg:"#577b87",color:"white",p:2,borderRadius:10}}>Learning Tool</Text></Link>
+              display={{ base: "none", md: "flex" }}
+              fontWeight={700}
+              fontSize={20}
+              color="#577b87"
+            >
+              <Link to={"/testspeed"}></Link>
+                <Text
+                  _hover={{ bg: "#577b87", color: "white", p: 2, borderRadius: 10 }}
+                >
+                  Test Speed
+                </Text>
+              </Link>
+              <Link to={"/test"}>
+                <Text
+                  _hover={{ bg: "orange", color: "white", p: 2, borderRadius: 10 }}
+                >
+                  Easy
+                </Text>
+              </Link>
+              <Link to={"/test1"}></Link>
+                <Text
+                  _hover={{ bg: "orange", color: "white", p: 2, borderRadius: 10 }}
+                >
+                  Medium
+                </Text>
+              </Link>
+              <Link to={"/test2"}>
+                <Text
+                  _hover={{ bg: "orange", color: "white", p: 2, borderRadius: 10 }}
+                >
+                  Hard
+                </Text>
+              </Link>
             </HStack>
           </HStack>
-          {login===true ? (
+          {login === true ? (
             <Flex alignItems={"center"}>
               <Menu>
                 <MenuButton
@@ -74,38 +103,45 @@ export default function Simple() {
                   cursor={"pointer"}
                   minW={0}
                 >
-                  <Avatar
-                    size={"sm"}
-                    src={details.user.photoURL}
-                  />
+                  <Avatar size={"sm"} src={details.user.photoURL} />
                 </MenuButton>
                 <MenuList>
-                 <Link to='/profile'><MenuItem>Profile</MenuItem></Link> 
+                  <Link to="/profile">
+                    <MenuItem>Profile</MenuItem>
+                  </Link>
                   <MenuDivider />
                   <MenuItem onClick={handleLogut}>Logout</MenuItem>
                 </MenuList>
               </Menu>
             </Flex>
           ) : (
-            <Box display={"flex"} w={{base:"auto"}} gap={6} textAlign={"center"} color='#577b87'>
-              <Link to={'/login'}><Text _hover={{bg:"#577b87",color:"white",p:2,borderRadius:10}} fontWeight={700}fontSize={20}>Login</Text></Link>
+            <Box display={"flex"} w={{ base: "auto" }} gap={6} textAlign={"center"} color="#577b87">
+              <Link to={"/login"}>
+                <Text
+                  _hover={{ bg: "#577b87", color: "white", p: 2, borderRadius: 10 }}
+                  fontWeight={700}
+                  fontSize={20}
+                >
+                  Login
+                </Text>
+              </Link>
             </Box>
           )}
         </Flex>
 
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
-                      <Stack as={"nav"} spacing={4}  fontWeight={700} fontSize={20}>
-                      {Links.map((link, i) => (
-                                <NavLink
-                                    key={i}
-                                    to={link.id}
-                                    name={link.name}
-                                    w="xm"
-                                    textalign="center"
-                                    onClick={() => onClose()}
-                                />
-                            ))}
+            <Stack as={"nav"} spacing={4} fontWeight={700} fontSize={20}>
+              {Links.map((link, i) => (
+                <NavLink
+                  key={i}
+                  to={link.id}
+                  name={link.name}
+                  w="xm"
+                  textalign="center"
+                  onClick={() => onClose()}
+                />
+              ))}
             </Stack>
           </Box>
         ) : null}

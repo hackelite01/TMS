@@ -13,15 +13,17 @@ function AllRoutes() {
     return (
         <div>
             <Routes>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="/testspeed" element={<Test />}></Route>
-                <Route path="/testspeed/test" element={<TestSpeed />}></Route>
-                <Route path="/techniques" element={<TypingTech />}></Route>
-                <Route path="/login" element={<Login />}></Route>
-                <Route path="/signup" element={<Signup />}></Route>
-                <Route path='/profile' element={<Profile/>} />
+                <Route path="/" element={<Home />} />
+                <Route path="/testspeed" element={<Test />} />
+                <Route path="/testspeed/test" element={<TestSpeed />} />
+                <Route path="/testspeed/test1" element={<Test1 />} />
+                <Route path="/testspeed/test2" element={<Test2 />} />
+                <Route path="/techniques" element={<TypingTech />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/profile" element={<Profile />} />
             </Routes>
         </div>
-    )
+    );
 } 
 export default AllRoutes;

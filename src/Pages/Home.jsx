@@ -18,18 +18,6 @@ function Home() {
 
         <Box display='flex' flexDirection='column' gap={35}>
 
-            <Box bg='white' mt='-100px' w='70%' borderRadius='15px' ml='15%' display={{md: 'grid',lg: 'flex'}} justifyContent='space-around'>
-                <Box m={'auto'} p='1.5rem'>
-                <Image src='https://www.tckpublishing.com/wp-content/uploads/2015/02/keyboard-finger-placement.jpg'  />
-                </Box>
-                <Box m={{sm:'0.5rem',lg:'3rem'}}>
-                    <Box p={4}>
-                    <Heading textAlign='start' mb='1rem' color={'black'}>Learn Typing</Heading>
-                    <Text textAlign='start' color={'black'} mb='1rem' >Speed up your learning progress with TypeMaster Free Exercises and develop valuable keyboarding skills!</Text>
-                    <Link to="/typingteacher" className='pageLink'>Learn Typing Free </Link>
-                    </Box>
-                </Box>
-            </Box>
             <Box bg='white' w='70%' borderRadius='15px' mb='100px' ml='15%' display={{lg: 'flex',md: 'grid'}} justifyContent='space-around'>
                 <Box alignSelf={'center'} m='auto' p={'1.8rem'} ml={{base:'none',lg:'7rem'}}>
                 <Image src='https://www.pngtosvg.com/gallery/wp-content/uploads/2020/12/1949685070.png'  />

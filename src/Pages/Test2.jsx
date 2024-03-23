@@ -113,7 +113,7 @@ function Timer(props) {
     </>
   );
 }
-export const TestSpeed = () => {
+export const TestSpeed2 = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [input, Setinput] = useState("");
   const randomText = useRef(texts());
@@ -257,3 +257,6 @@ export const TestSpeed = () => {
     </Box>
   );
 };
+
+
+export default TestSpeed2;

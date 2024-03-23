@@ -58,7 +58,7 @@ function Test() {
 
                                     <AlertDialogFooter m='1rem auto'>
                                         <Button onClick={onClose} colorScheme='whatsapp' p='2rem 2.5rem' fontSize={{base:18,lg:30}}>
-                                            <Link to="/testspeed/test">Start Typing Test</Link>
+                                            <Link to="/testspeed">Start Typing Test</Link>
                                         </Button>
                                        
                                     </AlertDialogFooter>

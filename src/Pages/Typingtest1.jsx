@@ -23,7 +23,7 @@ import { SlSpeedometer } from "react-icons/sl";
 import { GiOnTarget } from "react-icons/gi";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { VscDebugStart } from "react-icons/vsc";
-function Test() {
+function Test1() {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     return (
@@ -58,7 +58,7 @@ function Test() {
 
                                     <AlertDialogFooter m='1rem auto'>
                                         <Button onClick={onClose} colorScheme='whatsapp' p='2rem 2.5rem' fontSize={{base:18,lg:30}}>
-                                            <Link to="/testspeed/test">Start Typing Test</Link>
+                                            <Link to="/testspeed/test1">Start Typing Test</Link>
                                         </Button>
                                        
                                     </AlertDialogFooter>
@@ -109,7 +109,7 @@ function Test() {
                         <Text textAlign='start' fontSize={18} color='black'>
                             You can take the test as many times as you want! Only the best score will count towards your certification, there’s no need to worry about making a mistake.</Text>
                         <Box display='flex' h='5rem' mt={5} color='blue' fontSize={20} fontWeight='500' textAlign='center' _hover={{ textDecoration: "underline", gap: "1.5rem" }} gap='0.5rem' >
-                            <Text textAlign='start' pb='5rem' ><Link to='/testspeed/test'>Take Typing Test</Link> </Text><Text pt={1} fontSize={22}><AiOutlineArrowRight /></Text>
+                            <Text textAlign='start' pb='5rem' ><Link to='/testspeed/test1'>Take Typing Test</Link> </Text><Text pt={1} fontSize={22}><AiOutlineArrowRight /></Text>
                         </Box>
                     </Box>
                 </Box>

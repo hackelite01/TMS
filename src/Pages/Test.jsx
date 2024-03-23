@@ -257,3 +257,5 @@ export const TestSpeed = () => {
     </Box>
   );
 };
+
+export default TestSpeed;

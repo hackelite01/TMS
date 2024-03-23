@@ -67,7 +67,7 @@ export default function Simple() {
               <Link to={"/testspeed"}>
                 <Text _hover={{ bg: "#577b87", color: "white", p: 2, borderRadius: 10 }}>Test Speed</Text>
               </Link>
-              <Link to={"/test"}>
+              <Link to={"/testspeed"}>
                 <Button variant="outline" colorScheme="orange" _hover={{ bg: "orange.400" }}>Easy</Button>
               </Link>
               <Link to={"/test1"}>

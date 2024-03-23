@@ -20,7 +20,6 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import logo from "./logo.png"
 
 const Links = [
-    { name: "Typing Teacher", id: "/typingteacher" },
     { name: "Test Speed", id: "/testspeed" },
     { name: "Learning Tool", id: "/techniques" },
     { name: "Login", id: "/login" },
@@ -61,7 +60,6 @@ export default function Simple() {
               spacing={4}
                           display={{base: "none",md: "flex"}}
             fontWeight={700}fontSize={20} color='#577b87'>
-              <Link to={"/typingteacher"}><Text _hover={{bg:"#577b87",color:"white" ,p:2,borderRadius:10}}>Typing Teacher</Text></Link>
               <Link to={"/testspeed"}><Text _hover={{bg:"#577b87",color:"white",p:2,borderRadius:10}}>Test Speed</Text></Link>
               <Link to={"/techniques"}><Text _hover={{bg:"#577b87",color:"white",p:2,borderRadius:10}}>Learning Tool</Text></Link>
             </HStack>

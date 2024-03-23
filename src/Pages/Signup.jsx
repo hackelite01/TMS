@@ -110,7 +110,7 @@ function Signup() {
 
             <Stack spacing={5} direction="column">
               <Checkbox w="18rem" colorScheme="blue" defaultChecked>
-                I have read and agree to Typetest's terms of use and privacy
+                I have read and agree to TypeMaster's terms of use and privacy
                 policy
               </Checkbox>
               <Checkbox colorScheme="blue" defaultChecked>

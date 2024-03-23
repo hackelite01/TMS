@@ -7,7 +7,7 @@ function Footer() {
     <hr color="green" />
         <Box display={'flex'} width={{base:'auto',md:'60%'}} gap={9} textAlign='center' flexWrap='wrap' m={'auto'} p='1rem'>
             <h3>For Devlopers</h3>
-            <Text>About</Text>
+            <Text >About</Text>
             <Text>High Scores</Text>
             <Text>FAQ</Text>
             <Text >Contact Us</Text>

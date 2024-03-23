@@ -10,7 +10,7 @@ function Home() {
             </Box>
             <Box display='flex' flexDirection='column'>
                 <Heading color='white' textAlign='start' mb='1rem' mt='2rem'>Type Faster</Heading>
-                <Text mb='1rem' textAlign='start' color='white'>Check your typing speed online. Grow your typing ablity with our free lessons</Text>
+                <Text mb='1rem' textAlign='start' color='white'>Check your typing speed online. Grow your typing ablity with us</Text>
             </Box>
 
         </Box>

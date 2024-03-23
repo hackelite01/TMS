@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Box,
@@ -13,31 +14,31 @@ import {
   MenuDivider,
   useDisclosure,
   useColorModeValue,
-  Stack,Image,Text
+  Stack,
+  Image,
+  Text,
 } from "@chakra-ui/react";
-import NavLink from './NavLink';
+import NavLink from "./NavLink";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import logo from "./logo.png"
+import logo from "./logo.png";
 
 const Links = [
-    { name: "Test Speed", id: "/testspeed" },
-    { name: "Learning Tool", id: "/techniques" },
-    { name: "Login", id: "/login" },
-    { name: "SignUp", id: "/signup" }
+  { name: "Test Speed", id: "/testspeed" },
+  { name: "Learning Tool", id: "/techniques" },
+  { name: "Login", id: "/login" },
+  { name: "SignUp", id: "/signup" },
 ];
-
 
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-    const login=JSON.parse(localStorage.getItem('login'))
-  const details=JSON.parse(localStorage.getItem('emaildetail'))
-    
-    const handleLogut=() =>
-    {
-        localStorage.clear()
-        window.location.reload()
-    }
-  
+  const login = JSON.parse(localStorage.getItem("login"));
+  const details = JSON.parse(localStorage.getItem("emaildetail"));
+
+  const handleLogout = () => {
+    localStorage.clear();
+    window.location.reload();
+  };
+
   return (
     <>
       <Box bg={useColorModeValue("gray.100", "gray.900")} px={4} borderRadius={15}>
@@ -63,88 +64,53 @@ export default function Simple() {
               fontSize={20}
               color="#577b87"
             >
-              <Link to={"/testspeed"}></Link>
-                <Text
-                  _hover={{ bg: "#577b87", color: "white", p: 2, borderRadius: 10 }}
-                >
-                  Test Speed
-                </Text>
+              <Link to={"/testspeed"}>
+                <Text _hover={{ bg: "#577b87", color: "white", p: 2, borderRadius: 10 }}>Test Speed</Text>
               </Link>
               <Link to={"/test"}>
-                <Text
-                  _hover={{ bg: "orange", color: "white", p: 2, borderRadius: 10 }}
-                >
-                  Easy
-                </Text>
+                <Button variant="outline" colorScheme="orange" _hover={{ bg: "orange.400" }}>Easy</Button>
               </Link>
-              <Link to={"/test1"}></Link>
-                <Text
-                  _hover={{ bg: "orange", color: "white", p: 2, borderRadius: 10 }}
-                >
-                  Medium
-                </Text>
+              <Link to={"/test1"}>
+                <Button variant="outline" colorScheme="orange" _hover={{ bg: "orange.400" }}>Medium</Button>
               </Link>
               <Link to={"/test2"}>
-                <Text
-                  _hover={{ bg: "orange", color: "white", p: 2, borderRadius: 10 }}
-                >
-                  Hard
-                </Text>
+                <Button variant="outline" colorScheme="orange" _hover={{ bg: "orange.400" }}>Hard</Button>
               </Link>
             </HStack>
           </HStack>
-          {login === true ? (
+          {login ? (
             <Flex alignItems={"center"}>
               <Menu>
-                <MenuButton
-                  as={Button}
-                  rounded={"full"}
-                  variant={"link"}
-                  cursor={"pointer"}
-                  minW={0}
-                >
-                  <Avatar size={"sm"} src={details.user.photoURL} />
+                <MenuButton as={Button} rounded={"full"} variant={"link"} cursor={"pointer"} minW={0}>
+                  <Avatar size={"sm"} src={details?.user?.photoURL} />
                 </MenuButton>
                 <MenuList>
                   <Link to="/profile">
                     <MenuItem>Profile</MenuItem>
                   </Link>
                   <MenuDivider />
-                  <MenuItem onClick={handleLogut}>Logout</MenuItem>
+                  <MenuItem onClick={handleLogout}>Logout</MenuItem>
                 </MenuList>
               </Menu>
             </Flex>
           ) : (
             <Box display={"flex"} w={{ base: "auto" }} gap={6} textAlign={"center"} color="#577b87">
               <Link to={"/login"}>
-                <Text
-                  _hover={{ bg: "#577b87", color: "white", p: 2, borderRadius: 10 }}
-                  fontWeight={700}
-                  fontSize={20}
-                >
-                  Login
-                </Text>
+                <Text _hover={{ bg: "#577b87", color: "white", p: 2, borderRadius: 10 }} fontWeight={700} fontSize={20}>Login</Text>
               </Link>
             </Box>
           )}
         </Flex>
 
-        {isOpen ? (
+        {isOpen && (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4} fontWeight={700} fontSize={20}>
               {Links.map((link, i) => (
-                <NavLink
-                  key={i}
-                  to={link.id}
-                  name={link.name}
-                  w="xm"
-                  textalign="center"
-                  onClick={() => onClose()}
-                />
+                <NavLink key={i} to={link.id} name={link.name} w="xm" textalign="center" onClick={() => onClose()} />
               ))}
             </Stack>
           </Box>
-        ) : null}
+        )}
       </Box>
     </>
   );

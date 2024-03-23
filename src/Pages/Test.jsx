@@ -258,4 +258,4 @@ export const TestSpeed = () => {
   );
 };
 
-export default TestSpeed;
+export default TestSpeed

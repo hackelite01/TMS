@@ -23,7 +23,7 @@ import { SlSpeedometer } from "react-icons/sl";
 import { GiOnTarget } from "react-icons/gi";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { VscDebugStart } from "react-icons/vsc";
-function Test() {
+function Test2() {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     return (
@@ -58,7 +58,7 @@ function Test() {
 
                                     <AlertDialogFooter m='1rem auto'>
                                         <Button onClick={onClose} colorScheme='whatsapp' p='2rem 2.5rem' fontSize={{base:18,lg:30}}>
-                                            <Link to="/testspeed">Start Typing Test</Link>
+                                            <Link to="/testspeed/test2">Start Typing Test</Link>
                                         </Button>
                                        
                                     </AlertDialogFooter>
@@ -119,4 +119,4 @@ function Test() {
             
     )
 }
-export default Test;
+export default Test2;

@@ -76,6 +76,9 @@ export default function Simple() {
               <Link to={"/test2"}>
                 <Button variant="outline" colorScheme="orange" _hover={{ bg: "orange.400" }}>Hard</Button>
               </Link>
+              <Link to={"/techniques"}>
+                <Text _hover={{ bg: "#577b87", color: "white", p: 2, borderRadius: 10 }}>Techniques</Text>
+              </Link>
             </HStack>
           </HStack>
           {login ? (

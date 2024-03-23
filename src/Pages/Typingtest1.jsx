@@ -82,7 +82,7 @@ function Test1() {
                                         <Th display='flex' gap='5px'><GiOnTarget fontSize={{base:'auto',lg:20}}  />ACCURACY</Th>
                                     </Tr>
                                 </Thead>
-                                <hr />
+                                <hr/>
                                 <Tbody w={{base:'auto',lg:'100%'}} fontWeight='500' color={'black'} m={'auto'} justifyContent={{base:'center',sm:'space-between'}}>
                                     <Tr display={{base:'flex',sm:'flex',md:'flex'}} flexDirection='row' w={{base:'auto',lg:'100%'}} justifyContent='space-between' alignItems='center'>
                                         <Td display='flex' textAlign='center'><Image w={30} src='https://cdn.vectorstock.com/i/preview-1x/65/82/silver-rosette-vector-996582.jpg' /><Text pt={2}>PLATINUM</Text></Td>
@@ -119,4 +119,4 @@ function Test1() {
             
     )
 }
-export default Test;
+export default Test1;

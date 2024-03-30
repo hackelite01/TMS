@@ -53,7 +53,7 @@ export default function Profile() {
         </Heading>
         <FormControl id="userName">
           <FormLabel>User Icon</FormLabel>
-          <Stack direction={["column", "row"]} spacing={6}>
+          <Stack direction={["column", "row"]} spacing={6} justifyContent="center">
             <Center>
               <Avatar size="xl" src={data.user.photoURL}>
                 <AvatarBadge
@@ -67,9 +67,7 @@ export default function Profile() {
                 />
               </Avatar>
             </Center>
-            <Center w="full">
-              <Button w="full">Change Icon</Button>
-            </Center>
+            
           </Stack>
         </FormControl>
         <FormControl id="userName" isRequired>

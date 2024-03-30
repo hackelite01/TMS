@@ -20,7 +20,7 @@ import {
 } from "@chakra-ui/react";
 import NavLink from "./NavLink";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import logo from "./logo.png";
+import logo from "./Typing.gif";
 
 const Links = [
   { name: "Test Speed", id: "/testspeed" },
@@ -64,9 +64,9 @@ export default function Simple() {
               fontSize={20}
               color="#577b87"
             >
-              <Link to={"/testspeed"}>
+              
                 <Text _hover={{ bg: "#577b87", color: "white", p: 2, borderRadius: 10 }}>Test Speed</Text>
-              </Link>
+              
               <Link to={"/testspeed"}>
                 <Button variant="outline" colorScheme="orange" _hover={{ bg: "orange.400" }}>Easy</Button>
               </Link>

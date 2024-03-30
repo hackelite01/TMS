@@ -95,24 +95,10 @@ function Login()
             Log in with Google 
           </Button>}
 
-          <Button colorScheme="facebook" leftIcon={<FaFacebook />}>
-            Log in with Facebook
-          </Button>
+    
         </HStack>
-        <Text textAlign="start" margin="auto">
-          or you can login with your email:
-        </Text>
-              <Box w="100%">
-                { input ===true? <Navigate to={'/'} />:<form onSubmit={handleSubmit}>
-          <Input placeholder="Email Address" type="email" name="email" value={email} onChange={handleChange} margin="1rem 0" />
-          <Input placeholder="Enter Password" type="password" name="password" value={password} onChange={handleChange} margin="1rem 0" />
-          <Box marginBottom="1rem" marginTop="1rem">
-            <Button colorScheme="blue" onClick={handleSubmit}>LOG IN</Button> <strong>or</strong>{" "}
-            <Link to="/signup">Sign Up now</Link>
-                      </Box>
-                      </form>}
-          <Link to="/resetpassword">Forget your password?</Link>
-        </Box>
+        
+
       </Container>
     </>
   );
